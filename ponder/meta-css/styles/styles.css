@@ -1,0 +1,41 @@
+/* * {
+    border: 1px solid red;
+} */
+body {
+    background-color: #ddd;
+    font-size: 18px;
+}
+#content {
+    max-width: 800px;
+    margin: 32px auto;
+    border: 2px solid #d1d1d1;
+    padding: 32px;
+}
+#content p:first-of-type {
+    color: #035f9c;
+    letter-spacing: 0.2px;
+}
+hr {
+    height: 3px;
+    max-width: 500px;
+    background-color: #035f9c;
+    margin: 18px auto;
+}
+img#logos {
+    max-width: min(380px, 100%);
+    display: block;
+    margin: 0 auto;
+}
+h1, h2, p {
+    text-align: center;
+}
+ul {
+    padding-inline-start: 0px;
+}
+li {
+    list-style: none;
+}
+#topics {
+    max-width: 360px;
+    margin: 0 auto;
+}
