@@ -7,12 +7,13 @@
     <meta name="description" content="Picture display example site.">
     <title>Cool Pics</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Cool Pics 📷</h1>
-        <button id="nav-menu">Menu</button>
-        <nav>
+        <button id="nav-btn">Menu</button>
+        <nav class="hidden">
             <a href="#">Home</a>
             <a href="#">People</a>
             <a href="#">Places</a>
@@ -55,5 +56,9 @@
     <footer>
         <p>&copy;2025 Not a real site</p>
     </footer>
+    <dialog id="modal">
+        <img src="" alt="">
+        <button>X</button>
+    </dialog>
 </body>
 </html>
