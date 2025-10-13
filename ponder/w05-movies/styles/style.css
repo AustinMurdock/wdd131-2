@@ -47,7 +47,7 @@ header, footer {
     border-radius: 8px;
     margin: 0 auto;
 }
-#desc {
+.movie .desc {
     grid-column: 1/3;
 }
 
