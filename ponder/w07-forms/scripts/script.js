@@ -8,7 +8,7 @@
     const paypalContainer = document.querySelector('#paypalUsernameContainer');
     const creditInput = document.querySelector('#creditCardNumberContainer input');
     const paypalInput = document.querySelector('#paypalUsernameContainer input');
- 
+
 function togglePaymentDetails(e) {
     
     // Show the container based on the selected payment method, and add the required attribute back.
@@ -90,4 +90,4 @@ function submitHandler(event) {
     formContainer.innerHTML = '<h2>Thank you for your purchase.</h2>';
 }
 
-document.querySelector('#checkoutForm').addEventListener('submit', submitHandler)
+document.querySelector('#checkoutForm').addEventListener('submit', submitHandler);
