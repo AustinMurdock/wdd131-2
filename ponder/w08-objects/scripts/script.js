@@ -15,8 +15,11 @@ const course1 = {
         if (sectionIndex >= 0) {
             this.sections[sectionIndex].enrolled++;
             renderSections(this.sections);
-        };
-        console.log("student enrolled to section " + sectionNum);
+            console.log(`Student enrolled to section ${sectionNum}`);
+        }
+        else {
+            console.log(`Section "${sectionNum}" in "${this.code}" not found`);
+        }
     },
 };
 
