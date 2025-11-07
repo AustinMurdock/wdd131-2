@@ -1,0 +1,90 @@
+main {
+    margin: 20px 5px;
+}
+#errors, #success {
+    padding: 8px 20px;
+    text-align: center;
+    width: fit-content;
+    margin: 0;
+    list-style: none;
+}
+#errors {
+    background-color: #ffcccc;
+}
+#success {
+    background-color: #ccffcc;
+}
+.hidden {
+    display: none;
+}
+#card-form {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
+    width: 520px;
+    height: 360px;
+    margin: 20px auto;
+}
+#card-form input {
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid gray;
+    width: 90%;
+}
+#card-front, #card-back {
+    background-color: lightgray;
+    /* width: 360px; */
+    /* height: 180px; */
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px gray;
+}
+#card-front {
+    grid-column: 1/3;
+    grid-row: 1/3;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    z-index: 1;
+}
+#card-icon {
+    text-align: right;
+    font-size: xx-large;
+    margin: 0;
+    line-height: 30px;
+}
+#card-holder {
+    grid-column: 1/2;
+}
+#card-exp input {
+    width: 40%;
+}
+#card-back {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 78% 22%;
+    grid-template-rows: 3fr 1fr;
+}
+#card-scan-deco {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    align-self: flex-start;
+    background-color: black;
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+}
+#card-security {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: flex-end;
+    width: 90%;
+}
+#card-form button {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px gray;
+    align-self: center;
+}

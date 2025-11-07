@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Austin Murdock">
+    <meta name="description" content="Credit card form example.">
+    <title>Credit Card Form</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <ul id="errors" class="hidden"></ul>
+        <ul id="success" class="hidden"></ul>
+        <form id="card-form" action="" method="post">
+            <div id="card-front">
+                <p id="card-total">TOTAL: $</p>
+                <p id="card-icon">💳</p>
+                <div id="card-num">
+                    <label for="num-field">CARD NUMBER</label>
+                    <input type="text" name="num-field" id="num-field" placeholder="1234 1234 1234 1234" required minlength="16" maxlength="19" pattern="[1-9 ]{16,19}">
+                </div>
+                <div id="card-holder">
+                    <label for="holder-field">CARD HOLDER</label>
+                    <input type="text" name="holder-field" id="holder-field" placeholder="John Doe" required>
+                </div>
+                <div id="card-exp">
+                    <label for="exp-date">EXPIRATION</label>
+                    <input type="number" id="exp-month" name="exp-month" placeholder="MM" aria-labelledby="exp-date" required min="1" max="12">
+                    <input type="number" id="exp-year" name="exp-year" placeholder="YY" aria-labelledby="exp-date" required min="0" max="99">
+                </div>
+            </div>
+            <div id="card-back">
+                <div aria-hidden="true" id="card-scan-deco"></div>
+                <div id="card-security">
+                    <label for="security-field">CVC/CVV</label>
+                    <input type="text" name="security-field" id="security-field" placeholder="xxx" required pattern="[0-9]{3}">
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>
