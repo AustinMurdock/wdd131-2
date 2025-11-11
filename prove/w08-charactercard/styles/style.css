@@ -1,0 +1,84 @@
+
+body {
+    font-family: "Palatino Linotype", sans-serif;
+    background: #f0f4f8;
+}
+
+main {
+    display: flex;
+}
+
+.card {
+    background: #313131;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    width: 400px;
+    margin: 100px auto;
+}
+
+.image {
+    width: 400px;
+    height: 360px;
+    border-radius: 15px 15px 0 0;
+    background-color: blanchedalmond;
+    object-fit: cover;
+    transition: 0.5s;
+    opacity: 1;
+    rotate: none;
+}
+
+.vanquished .image {
+    transition: 0.5s;
+    opacity: 0;
+    rotate: 3 0.5 2 45deg;
+}
+
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: -4px 0 20px 0;
+    color: white;
+    padding: 15px 0 15px 35px;
+    background-color: #5d747b;
+}
+
+.stats {
+    margin: 10px 15px 7px 35px;
+    text-align: left;
+    padding: 0px;
+}
+
+.stats li {
+    margin: 5px 0;
+    color: #f0f4f8;
+    list-style: none;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #5d747b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: #58605a;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        flex-direction: column;
+    }
+    .card {
+        margin: 40px auto;
+    }
+}
