@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Austin Murdock">
+    <meta name="description" content="CSS flexbox example using recipes.">
+    <title>RecipeBook</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Open Graph (Facebook, LinkedIn, etc.): -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RecipeBook">
+    <meta property="og:description" content="CSS flexbox example using recipes.">
+    <meta property="og:url" content="https://austinmurdock.github.io/wdd131-2/prove/w09-recipebook/">
+    <meta property="og:image" content="./images/sweet-potato-waffle-md-1200px-630px.png">
+    <!-- X Card -->
+    <meta name="twitter:card" content="Social Preview Image">
+    <meta name="twitter:title" content="RecipeBook">
+    <meta name="twitter:description" content="CSS flexbox example using recipes.">
+    <meta name="twitter:image" content="./images/sweet-potato-waffle-md-1200px-630px.png">
+    <!-- One favicon (ICO works everywhere): -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- One Apple Touch Icon (iOS home screen): -->
+    <link rel="apple-touch-icon" href="./images/recipe-book-180px.png">
+</head>
+<body>
+    <header>
+        <img src="./images/recipe-book.png" alt="cookbook logo" aria-hidden="true">
+        <h1>RecipeBook</h1>
+    </header>
+    <main>
+        <div id="search-bar">
+            <label for="search"></label>
+            <input type="text" name="search" id="search" placeholder="Find a recipe">
+            <img src="./images/search.svg" alt="magnifying glass" aria-hidden="true">
+        </div>
+        <hr>
+        <div id="gallery">
+            <section class="gallery-recipe">
+                <img src="./images/apple-crisp.jpg" alt="apple crisp with ice cream">
+                <div class="recipe-content">
+                    <ul class="recipe-tags">
+                        <li>dessert</li>
+                    </ul>
+                    <h2>Apple Crisp</h2>
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true">⭐</span>
+                        <span aria-hidden="true">⭐</span>
+                        <span aria-hidden="true">⭐</span>
+                        <span aria-hidden="true">⭐</span>
+                        <span aria-hidden="true">☆</span>
+                    </span>
+                    <p class="recipe-description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div id="media-icons">
+            <a href="#">
+                <img src="./images/instagram_icon.svg" alt="instagram icon">
+            </a>
+            <a href="#">
+                <img src="./images/youtube_icon.svg" alt="youtube icon">
+            </a>
+            <a href="#">
+                <img src="./images/pinterest_icon.svg" alt="pinterest icon">
+            </a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>                   
+    </footer>
+</body>
+</html>
