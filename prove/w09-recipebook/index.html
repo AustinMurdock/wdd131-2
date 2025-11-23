@@ -22,6 +22,7 @@
     <link rel="icon" href="./images/favicon.ico">
     <!-- One Apple Touch Icon (iOS home screen): -->
     <link rel="apple-touch-icon" href="https://austinmurdock.github.io/wdd131-2/prove/w09-recipebook/images/recipe-book-180px.png">
+    <script src="./scripts/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -32,28 +33,12 @@
         <div id="search-bar">
             <label for="search"></label>
             <input type="text" name="search" id="search" placeholder="Find a recipe">
-            <img src="./images/search.svg" alt="magnifying glass" aria-hidden="true">
+            <button id="search-submit">
+                <img src="./images/search.svg" alt="search icon button" aria-hidden="true">
+            </button>
         </div>
         <hr>
-        <div id="gallery">
-            <section class="gallery-recipe">
-                <img src="./images/apple-crisp.jpg" alt="apple crisp with ice cream">
-                <div class="recipe-content">
-                    <ul class="recipe-tags">
-                        <li>dessert</li>
-                    </ul>
-                    <h2>Apple Crisp</h2>
-                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                        <span aria-hidden="true">⭐</span>
-                        <span aria-hidden="true">⭐</span>
-                        <span aria-hidden="true">⭐</span>
-                        <span aria-hidden="true">⭐</span>
-                        <span aria-hidden="true">☆</span>
-                    </span>
-                    <p class="recipe-description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-                </div>
-            </section>
-        </div>
+        <div id="gallery"></div>
     </main>
     <footer>
         <div id="media-icons">

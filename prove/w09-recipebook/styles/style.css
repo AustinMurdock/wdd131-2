@@ -42,7 +42,19 @@ h1 {
 #search-bar input:focus-visible {
     outline: none;
 }
-#search-bar img {
+#search-submit {
+    height: 100%;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    /* cursor: pointer; */
+}
+#search-submit img:hover {
+    rotate: 10deg;
+    transition: 0.2s;
+}
+#search-submit img {
     height: 100%;
 }
 hr {
@@ -51,6 +63,7 @@ hr {
 #gallery {
     display: flex;
     flex-direction: column;
+    /* row-gap: 20px; */
 }
 .gallery-recipe {
     display: flex;
@@ -59,14 +72,21 @@ hr {
     row-gap: 4px;
 }
 .recipe-tags {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* column-gap: 2px; */
+}
+.recipe-tags li {
     list-style: none;
     padding: 4px 3px;
-    margin: 0;
     border: 1px solid darkgray;
     background-color: #efefef;
     border-radius: 2px;
     width: fit-content;
     font-size: 1.4rem;
+    text-align: center;
+    align-content: center;
 }
 .gallery-recipe img {
     width: 100%;
@@ -110,6 +130,7 @@ footer {
         width: auto;
         max-height: 320px;
         max-width: 40vw;
+        object-fit: cover;
     }
     .recipe-description {
         display: block;
