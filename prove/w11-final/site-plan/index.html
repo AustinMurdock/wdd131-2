@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Austin Murdock">
+    <meta name="description" content="Site plan for dynamic web final project.">
+    <title>Site Plan</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./../favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>[TM-HM Search] Site Plan</h1>
+        <h2>Austin Murdock</h2>
+        <h2>WDD 131-(11:30-12:30)</h2>
+    </header>
+    <main>
+        <hr/>
+        <h2>Overview</h2>
+        <h3>Purpose</h3>
+        <p>Allow users (particularly myself) to display and filter information about several pokemon at once, taking obtainability by generation and location for normal playthroughs as a major consideration for pokemon and their possible move coverages.</p>
+        <h3>Audience</h3>
+        <p>Myself and others who enjoy casual optimization for type coverage and stat distributions in standard pokemon playthroughs. This site should make it easier to find which pokemon are actually obtainable in a given game, and in what locations.</p>
+        <h3>Dynamic elements</h3>
+        <p>Third-party api calls, object list filtering and sorting, setting dom elements to display data or manipulated data. Here's a shiny ditto sprite fetched from PokeApi through a bit of js test code:</p>
+        <img id="dynamic-test" alt="blue ditto pixel sprite">
+        <script>
+            const pokeUrl = "https://pokeapi.co/api/v2/"
+            const img = document.getElementById("dynamic-test");
+            fetch(pokeUrl + "pokemon/ditto")
+                .then(response => {
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    img.setAttribute("src", data.sprites.front_shiny)
+                });
+        </script>
+        <hr/>
+        <h2>Branding</h2>
+        <h3>Website Logo</h3>
+        <img src="./images/tm-hm_search_logo.png" alt="site logo"/>
+        <hr/>
+        <h2>Style Guide</h2>
+        <h3>Color Palette</h3>
+        Palette URL:
+        <a href="https://coolors.co/393e41-f6f7eb-3f88c5-fa6982-44bba4" target="_blank">https://coolors.co/393e41-f6f7eb-3f88c5-fa6982-44bba4</a>
+        <table class="colors">
+            <tbody>
+                <tr>
+                    <th>Background</th>
+                    <th>Primary</th>
+                    <th>Secondary</th>
+                    <th>Accent 1</th>
+                    <th>Accent 2</th>
+                </tr>
+                <tr>
+                    <td class="background-c">#393E41</td>
+                    <td class="primary">#F6F7EB</td>
+                    <td class="secondary">#3F88C5</td>
+                    <td class="accent1">#FA6982</td>
+                    <td class="accent2">#44BBA4</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Typography</h3>
+        <h4>Heading Font: Georgia</h4>
+        <h4>Paragraph Font: Arial</h4>
+        <h3>Normal paragraph example</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br>
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum.
+        </p>
+        <h3>Colored paragraph example</h3>
+        <p class="colored">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br>
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea <br>
+            commodo consequat.
+        </p>
+        <h3>Navigation</h3>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Page 2</a>
+            <a href="#">extra</a>
+        </nav>
+        <hr/>
+        <h2>Content</h2>
+        <h3>By Location</h3>
+        <p>
+            The primary function of the site, to allow users to filter pokemon by proximity to in-game locations. <br>
+            The specific structure will depend on whatever is most convenient to filter the PokeAPI location through, but it will likely include search/filter boxes for generation, location, level, type, or other desired parameters, and a map of available locations.
+        </p>
+        <h3>By Move Coverage</h3>
+        <p>
+            Pokemon can usually have only up to two types, but each can have several types of available moves depending on TM/HM availability and user preference, leading to a much wider type coverage. So this page would be similar to the location search page, but with a focus on typing and type coverage. <br>
+            This section may be combined with the "By Location" page, depending on how the filtering methods work out. If so, I might just build a "generate random valid pokemon" function as a test.
+        </p>
+        <p>Most information for either page will be sourced from <a href="https://pokeapi.co">PokeAPI</a>, with some reference to <a href="https://bulbapedia.bulbagarden.net/wiki/Main_Page">Bulbapedia</a>.</p>
+        <h2>Wireframes</h2>
+        <h3>By Location</h3>
+        <p>Mostly a spreadsheet-style list with filter conditions.</p>
+        <img src="./images/Screenshot 2025-12-02 235109.png" alt="home page wireframe" style="width: 100%;"/>
+
+        <h3>By Move Coverage</h3>
+        <!-- <p>[Any additional details about page 2 that the wireframe does not make clear]</p> -->
+        <img src="./images/Screenshot 2025-12-02 235153.png" alt="page 2 wireframe" style="width: 100%;"/>
+    </main>
+    <footer>
+        <p>
+            Pokémon &copy; 2002-2025 Pokémon. &copy; 1995-2025 Nintendo/Creatures Inc./GAME FREAK inc. &trade;, &reg; and Pokémon character names are trademarks of Nintendo. <br>
+            No copyright or trademark infringement is intended in using Pokémon content on this page.
+        </p>
+    </footer>
+</body>
+</html>

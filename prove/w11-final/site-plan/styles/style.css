@@ -1,0 +1,173 @@
+
+:root {
+    /* --background-color: #684551;
+    --primary-color: #B0C592;
+    --secondary-color: #285943;
+    --accent1-color: #FA6982;
+    --accent2-color: #402E2A; */
+
+    --background-color: #393E41;
+    --primary-color: #F6F7EB;
+    --secondary-color: #3F88C5;
+    --accent1-color: #FA6982;
+    --accent2-color: #44BBA4;
+
+    --heading-font: Georgia, "Times New Roman";
+    --paragraph-font: Arial, Helvetica, sans-serif;
+
+
+    --headline-color-on-dark: var(--primary-color); /* headlines on a dark background */
+    --headline-color-on-color: var(--accent2-color); /* headlines on a colored background */
+    --paragraph-color-on-dark: white; /* paragraph text on a dark background */
+    --paragraph-color-on-color: var(--accent2-color); /* paragraph text on a colored background */
+    --paragraph-background-color: var(--primary-color);
+    --nav-link-color: var(--primary-color);
+    --nav-background-color: var(--secondary-color);
+    --nav-hover-link-color: var(--accent2-color);
+    --nav-hover-background-color: var(--primary-color);
+}
+
+/*    Look around below... and change whatever you want */
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em;
+    font-size: 18px;
+    background-color: var(--background-color);
+    color: var(--paragraph-color-on-dark);
+    font-family: var(--paragraph-font);
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--headline-color-on-dark);
+}
+h2 {
+    text-align: center;
+}
+hr {
+    height: 3px;
+    margin: 35px 0;
+    background: var(--accent1-color);
+    /* border: 1px solid var(--accent1-color); */
+    border: none;
+}
+header {
+    padding: 1em;
+    text-align: center;
+    color: var(--paragraph-color-on-color);
+    background-color: var(--paragraph-background-color);
+}
+header > h1,
+header > h2 {
+    color: var(--headline-color-on-color);
+}
+p, a {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color-on-dark);
+    padding: 1em;
+}
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+.colors th {
+    background-color: #999;
+}
+.colors td {
+    width: 20%;
+    height: 3em;
+}
+.primary {
+    background-color: var(--primary-color);
+    color: var(--paragraph-color-on-color);
+}
+.secondary {
+    background-color: var(--secondary-color);
+}
+.accent1 {
+    background-color: var(--accent1-color);
+}
+.accent2 {
+    background-color: var(--accent2-color);
+}
+.background-c {
+    background-color: var(--background-color);
+}
+p.colored {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color-on-color);
+}
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 3em;
+    text-align: center;
+    font-size: 1.2em;
+}
+nav {
+    list-style-type: none;
+    display: flex;
+}
+nav a {
+    padding: 1em;
+    min-width: 120px;
+    text-decoration: none;
+    padding: 10px;
+}
+nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+.sitemap {
+    display: grid;
+    justify-content: center;
+
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: 3em 1.5em 1.5em 3em;
+    grid-template-areas:
+        ". . home home . ."
+        ". . . top . ."
+        ". left left right right ."
+        "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+    text-align: center;
+}
+.sm-home {
+    grid-area: home;
+    background-color: #ccc;
+    line-height: 3em;
+}
+.sm-page2 {
+    grid-area: page2;
+    background-color: #ccc;
+    line-height: 3em;
+}
+.sm-page3 {
+    grid-area: page3;
+    background-color: #ccc;
+    line-height: 3em;
+}
+.top {
+    grid-area: top;
+    border-left: 1px solid;
+}
+.left {
+    grid-area: left;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+.right {
+    grid-area: right;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
