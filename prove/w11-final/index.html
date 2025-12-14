@@ -3,10 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Austin Murdock">
+    <meta name="description" content="An unfinished location-based pokemon search tool.">
+    <title>TM-HM Search</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer></script>
     <link rel="icon" href="./favicon.ico">
 </head>
 <body>
-    
+    <header>
+        <a href="#">
+            <img src="./images/tm-hm_search_logo.png" alt="main logo">
+        </a>
+        <nav>
+            <a href="#">By Location</a>
+            <a href="#">Randomizer</a>
+        </nav>
+    </header>
+    <main>
+        <img src="https://archives.bulbagarden.net/media/upload/a/ae/Unova_Route_5_Map.png" alt="">
+        <table>
+            <colgroup>
+                <col span="1" class="t-num">
+                <col span="1" class="t-sprite">
+                <col span="1" class="t-name">
+                <col span="2" class="t-types">
+                <col span="6" class="t-stats">
+                <col span="1" class="t-stats-total">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col" colspan="2">Types</th>
+                    <th scope="col">HP</th>
+                    <th scope="col">Atk</th>
+                    <th scope="col">Def</th>
+                    <th scope="col">SpA</th>
+                    <th scope="col">SpD</th>
+                    <th scope="col">Spd</th>
+                    <th scope="col">Total
+                        <button>↕</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="results"></tbody>
+        </table>
+    </main>
+    <footer>
+        <p>
+            Pokémon &copy; 2002-2025 Pokémon. &copy; 1995-2025 Nintendo/Creatures Inc./GAME FREAK inc. &trade;, &reg; and Pokémon character names are trademarks of Nintendo. <br>
+            No copyright or trademark infringement is intended in using Pokémon content on this page.
+        </p>
+    </footer>
 </body>
 </html>
