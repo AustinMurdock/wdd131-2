@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Austin Murdock">
     <meta name="description" content="An unfinished location-based pokemon search tool.">
-    <title>TM-HM Search</title>
+    <title>Location Search</title>
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./scripts/script.js" defer></script>
     <link rel="icon" href="./favicon.ico">
@@ -17,11 +17,19 @@
         </a>
         <nav>
             <a href="#">By Location</a>
-            <a href="#">Randomizer</a>
+            <!-- <a href="#">Randomizer</a> -->
         </nav>
     </header>
     <main>
-        <img src="https://archives.bulbagarden.net/media/upload/a/ae/Unova_Route_5_Map.png" alt="">
+        <section id="context">
+            <p>
+                This is the initial version of a location-based pokemon search tool.<br>
+                Currently implemented features include API calls to <a href="https://pokeapi.co">pokeapi.co</a>, <br>
+                a table display set to pokedex ID numbers 1-151 (Generation 1, Kanto region), <br>
+                and descending table sorting.
+            </p>
+            <img src="https://archives.bulbagarden.net/media/upload/7/7c/KantoTownMap.png" alt="">
+        </section>
         <table>
             <colgroup>
                 <col span="1" class="t-num">
@@ -32,7 +40,7 @@
                 <col span="1" class="t-stats-total">
             </colgroup>
             <thead>
-                <tr>
+                <tr id="headers">
                     <th scope="col">#</th>
                     <th scope="col"></th>
                     <th scope="col">Name</th>
@@ -43,9 +51,7 @@
                     <th scope="col">SpA</th>
                     <th scope="col">SpD</th>
                     <th scope="col">Spd</th>
-                    <th scope="col">Total
-                        <button>↕</button>
-                    </th>
+                    <th scope="col">Total</th>
                 </tr>
             </thead>
             <tbody id="results"></tbody>
