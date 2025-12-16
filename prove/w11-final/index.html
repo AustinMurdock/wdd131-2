@@ -24,11 +24,13 @@
         <section id="context">
             <p>
                 This is the initial version of a location-based pokemon search tool.<br>
-                Currently implemented features include API calls to <a href="https://pokeapi.co">pokeapi.co</a>, <br>
-                a table display set to pokedex ID numbers 1-151 (Generation 1, Kanto region), <br>
-                and descending table sorting.
+                Currently implemented web mechanics include: <br>
+                 - API calls to <a href="https://pokeapi.co">pokeapi.co</a>, <br>
+                 - a table set to display information from those calls (set to pokedex ID numbers 1-151, Generation 1, Kanto region), <br>
+                 - descending multi-column sorting (click the headers), <br>
+                 - and parameters passed to subpages.
             </p>
-            <img src="https://archives.bulbagarden.net/media/upload/7/7c/KantoTownMap.png" alt="">
+            <img src="https://archives.bulbagarden.net/media/upload/7/7c/KantoTownMap.png" alt="kanto region in-game map" width="240" height="160">
         </section>
         <table>
             <colgroup>
@@ -36,7 +38,7 @@
                 <col span="1" class="t-sprite">
                 <col span="1" class="t-name">
                 <col span="2" class="t-types">
-                <col span="6" class="t-stats">
+                <col span="6" class="t-stats optional">
                 <col span="1" class="t-stats-total">
             </colgroup>
             <thead>

@@ -39,11 +39,11 @@ async function pBuildArr(id) {
 
 function buildListing(gen, areaArr) {
     let html = `\
-        <h2>${gen}</h2>
+        <h2>${String(gen).charAt(0).toUpperCase() + String(gen).slice(1)}</h2>
         <ul>
     `
     areaArr.forEach(a => {
-        html += `<li>${a}</li>`
+        html += `<li>${String(a).replaceAll("-", " ")}</li>`
     });
     html += `</ul>`;
     return html;

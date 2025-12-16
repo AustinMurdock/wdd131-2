@@ -8,9 +8,10 @@
 }
 
 body {
-    background-color: var(--color-k);
+    background-color: var(--color-g);
     color: var(--color-w);
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 h1, h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -24,7 +25,7 @@ header {
 }
 header img {
     height: 64px;
-    margin: 5px 20px;
+    margin: 2px 20px;
 }
 nav {
     margin-right: 20px;
@@ -32,32 +33,49 @@ nav {
 nav a {
     color: var(--color-w);
     font-size: 1.4rem;
-    padding: 25px 25px;
+    padding: 15px 25px;
     margin: 5px;
+    background-color: var(--color-k);
 }
 
 main {
     margin: 0 auto;
+    padding: 5px 0;
     text-align: center;
-    width: 90%;
+    width: 96%;
     max-width: 1200px;
+    background-color: var(--color-k);
 }
 #context {
     margin: 20px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    text-align: left;
+    column-gap: 20px;
+    max-width: 800px;
 }
 #context a {
     color: var(--color-w);
 }
 #context img {
     margin: 0 auto;
+    object-fit: scale-down;
+}
+table, th, td {
+    border-collapse: collapse;
 }
 table {
     margin: 30px auto 50px;
     background-color: #ddd;
     color: #000;
     max-width: 100vw;
+}
+.optional {
+    visibility: collapse;
+}
+td {
+    padding: 0 2px;
 }
 /* #headers th {
     border: 1px solid transparent;
@@ -100,4 +118,38 @@ tbody img {
 
 footer {
     text-align: center;
+    background-color: var(--color-k);
+    width: 96%;
+    padding: 5px 10px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        margin: 8px;
+    }
+    main {
+        margin: 20px auto;
+        width: 90%;
+    }
+    header img {
+        margin: 5px 20px;
+    }
+    nav a {
+        padding: 25px;
+    }
+    #context {
+        flex-direction: row;
+    }
+    table, tr, td {
+        border-collapse: separate;
+    }
+    .optional {
+        visibility: visible;
+    }
+    footer {
+        width: 90%;
+    }
 }

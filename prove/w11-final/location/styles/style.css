@@ -8,9 +8,10 @@
 }
 
 body {
-    background-color: var(--color-k);
+    background-color: var(--color-g);
     color: var(--color-w);
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
 }
 h1, h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -24,7 +25,7 @@ header {
 }
 header img {
     height: 64px;
-    margin: 5px 20px;
+    margin: 2px 20px;
 }
 nav {
     margin-right: 20px;
@@ -32,24 +33,30 @@ nav {
 nav a {
     color: var(--color-w);
     font-size: 1.4rem;
-    padding: 25px 25px;
+    padding: 15px 25px;
     margin: 5px;
+    background-color: var(--color-k);
 }
 
 main {
     margin: 0 auto;
+    padding: 5px 0;
     text-align: center;
-    width: 90%;
+    width: 96%;
     max-width: 1200px;
+    background-color: var(--color-k);
 }
 #context {
     margin: 20px auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
 }
 #main-img {
-    width: 128px;
+    width: 192px;
     margin: 0 auto;
+    object-fit: scale-down;
 }
 .p-type-bug {background-color: #91A119;}
 .p-type-dark {background-color: #50413F;}
@@ -73,9 +80,39 @@ main {
 #locations {
     max-width: 400px;
     margin: 30px auto 50px;
+    padding: 0 20px;
     text-align: left;
 }
 
 footer {
     text-align: center;
+    background-color: var(--color-k);
+    width: 96%;
+    padding: 5px 10px;
+    margin: 10px auto;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        margin: 8px;
+    }
+    main {
+        margin: 20px auto;
+        width: 90%;
+    }
+    header img {
+        margin: 5px 20px;
+    }
+    nav a {
+        padding: 25px;
+    }
+    #context {
+        flex-direction: row;
+        width: 60%;
+    }
+    footer {
+        width: 90%;
+    }
 }
